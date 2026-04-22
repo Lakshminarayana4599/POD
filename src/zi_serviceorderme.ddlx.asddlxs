@@ -1,0 +1,37 @@
+@Metadata.layer: #CORE
+annotate entity zi_serviceorder
+    with 
+{
+@UI.facet: [{ id: 'Erdat',type: #IDENTIFICATION_REFERENCE,position: 10,purpose: #STANDARD }]
+    @UI.lineItem: [{ position: 10 },{ position : 20,dataAction: 'updatePOD',label : 'updatePOD' , type : #FOR_ACTION },
+    { position: 30,dataAction: 'updatePGI' ,label : 'UpdatePGI',type: #FOR_ACTION },
+    { position : 40,dataAction: 'updateContract',label : 'updateContract' , type : #FOR_ACTION }]
+    @UI.selectionField: [{ position: 10 }]
+    @UI.identification: [{ position: 10 , label: 'VBELN' }]
+   Vbeln;
+   @UI.lineItem: [{ position: 20 }]
+     @UI.selectionField: [{ position: 20 }]
+     @UI.identification: [{ position: 20 , label: 'Erdat' }]
+   Erdat;
+    @UI.lineItem: [{ position: 30 }]
+      @UI.selectionField: [{ position: 30 }]
+      @UI.identification: [{ position: 30 , label: 'POD Date' }]
+   PodDate;
+    @UI.lineItem: [{ position: 40 }]
+      @UI.selectionField: [{ position: 40 }]
+      @UI.identification: [{ position: 40 , label: 'PGI Date' }]
+   PgiDate;
+    @UI.lineItem: [{ position: 50 }]
+      @UI.selectionField: [{ position: 50 }]
+      @UI.identification: [{ position: 50 , label: 'PGI Status' }]
+   PgiStatus;
+    @UI.lineItem: [{ position: 60 }]
+      @UI.selectionField: [{ position: 60 }]
+      @UI.identification: [{ position: 60 , label: 'POD Status' }]
+   PodStatus;
+    @UI.lineItem: [{ position: 70 }]
+      @UI.selectionField: [{ position: 70 }]
+      @UI.identification: [{ position: 70 , label: 'Delivery Type' }]
+   DeliveryType;
+    
+}

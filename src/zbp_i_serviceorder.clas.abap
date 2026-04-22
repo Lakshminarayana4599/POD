@@ -1,0 +1,5 @@
+CLASS zbp_i_serviceorder DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_serviceorder.
+ENDCLASS.
+
+CLASS zbp_i_serviceorder IMPLEMENTATION.
+ENDCLASS.

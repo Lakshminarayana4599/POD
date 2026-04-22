@@ -1,0 +1,28 @@
+managed implementation in class zbp_i_serviceorder unique;
+strict ( 2 );
+
+define behavior for zi_serviceorder alias serviceorder
+persistent table zservice_report
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  action updatePOD result[1] $self;
+  action updatePGI result[1] $self;
+  action updatePODStatus result[1] $self;
+  action updateContract result[1] $self;
+
+
+  mapping for zservice_report{
+  DeliveryType = delivery_type;
+  Erdat = erdat;
+  PgiDate = pgi_date;
+  PgiStatus = pgi_status;
+  PodStatus = pod_status;
+  Vbeln = vbeln;
+  PodDate = pod_date;
+  }
+}

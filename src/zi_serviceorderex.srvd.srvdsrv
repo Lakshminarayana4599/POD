@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for service order'
+define service ZI_SERVICEORDEREX {
+  expose zi_serviceorder;
+}
